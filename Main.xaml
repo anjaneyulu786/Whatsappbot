@@ -1,0 +1,143 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Main_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Core.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open browser" Hidden="False" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="https://web.whatsapp.com/">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="exist" />
+            </Sequence.Variables>
+            <ui:TypeInto DelayBefore="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBetweenKeys="2" DisplayName="Type into 'chrome.exe Chrome'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="9700883876[k(enter)]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="08586cb52bea75e30205796a25fd8bfd" Selector="&lt;webctrl tag='LABEL' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <Delay Duration="00:00:03" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <ui:UiElementExists DisplayName="Element Exists 'SPAN'" Exists="[exist]" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+              <ui:UiElementExists.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="96810e4cd92a486d949bc414b0529e93" Selector="&lt;webctrl aaname='online' parentid='main' tag='SPAN' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+              </ui:UiElementExists.Target>
+            </ui:UiElementExists>
+            <If Condition="[exist]" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <ui:TypeInto DelayBefore="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBetweenKeys="2" DisplayName="Type into 'chrome.exe Chrome'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_8" SendWindowMessages="False" SimulateType="False" Text="myGroup[k(enter)]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="08586cb52bea75e30205796a25fd8bfd" Selector="&lt;webctrl tag='LABEL' /&gt;" WaitForReady="INTERACTIVE" />
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                    <ui:TypeInto DelayBefore="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBetweenKeys="2" DisplayName="Type into 'chrome.exe Chrome'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_10" SendWindowMessages="False" SimulateType="False" Text="this Number is online[k(enter)]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="31d1aa8bed6c8222043612d2716e6ba9" Selector="&lt;webctrl aaname='Type a message' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;footer&amp;gt;div&amp;gt;div' parentid='main' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                  </Sequence>
+                </Sequence>
+              </If.Then>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+    <sads:DebugSymbol.Symbol>dzhEOlxVc2Vyc1xzaWRkZXNoYS50XERvY3VtZW50c1xVaVBhdGhcV2F0c3VwYm90XE1haW4ueGFtbBo4A2UOAgEBOQVjFgIBAjm/ATnaAQIBHD8LYBYCAQNDDUcbAgEYSA1IVAIBFkkNTSICARFODV8SAgEERaABRb8BAgEbQ6QCQ7oCAgEaQ39DggECARlIHUgnAgEXS4sBS8kBAgEVS9QBS9oBAgEUSUxJVQIBEk4bTiQCAQVQEV0cAgEHURNcHgIBCFIVViMCAQ1XFVsjAgEJVKgBVMcBAgEQUqwCUr8CAgEPUocBUooBAgEOWagBWdwCAgEMV60CV84CAgELV4cBV4oBAgEK</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="TypeInto_1" sap:VirtualizedContainerService.HintSize="483,134" />
+      <sap2010:ViewStateData Id="Delay_1" sap:VirtualizedContainerService.HintSize="483,22" />
+      <sap2010:ViewStateData Id="UiElementExists_1" sap:VirtualizedContainerService.HintSize="483,106" />
+      <sap2010:ViewStateData Id="TypeInto_8" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="TypeInto_10" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="Sequence_8" sap:VirtualizedContainerService.HintSize="336,432">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_7" sap:VirtualizedContainerService.HintSize="358,556">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="483,703" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="505,1209">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OpenBrowser_1" sap:VirtualizedContainerService.HintSize="519,1308" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="541,1432">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="581,1512" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
